@@ -51,7 +51,7 @@ BOARD_KERNEL_SEPARATED_DT := true
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01000000 --tags_offset 0x00000100
 TARGET_CUSTOM_DTBTOOL := dtbTool_moto
 TARGET_KERNEL_ARCH := arm
-TARGET_KERNEL_CONFIG := cm_athene_defconfig
+TARGET_KERNEL_CONFIG := insanity_defconfig
 TARGET_KERNEL_SOURCE := kernel/motorola/msm8952
 
 # Audio
@@ -75,12 +75,6 @@ BLUETOOTH_HCI_USE_MCT := true
 
 # Camera
 USE_DEVICE_SPECIFIC_CAMERA := true
-
-# CMHW
-BOARD_USES_CYANOGEN_HARDWARE := true
-BOARD_HARDWARE_CLASS += \
-    $(LOCAL_PATH)/cmhw \
-    hardware/cyanogen/cmhw
 
 # Display
 NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
