@@ -137,6 +137,9 @@ on enable-low-power
     swapon_all /fstab.qcom
     write /proc/sys/vm/swappiness 100
 
+    # Enable Laptop Mode
+    write /proc/sys/vm/laptop_mode 1
+
     # Process reclaim
     write /sys/module/process_reclaim/parameters/enable_process_reclaim 1
     write /sys/module/process_reclaim/parameters/pressure_min 10
